@@ -891,7 +891,7 @@ function UILibrary.Window(_, versionText)
                     SliderTitleLabel.TextXAlignment = Enum.TextXAlignment.Left
 
                     local TrackBarBase = Instance.new("Frame")
-                    TrackBarBar.Name = "bar"
+                    TrackBarBase.Name = "bar"
                     TrackBarBase.Parent = SliderInnerFrame
                     TrackBarBase.BackgroundColor3 = _G.Primary
                     TrackBarBase.Size = UDim2.new(0, 100, 0, 4)

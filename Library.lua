@@ -66,7 +66,7 @@ _ImageButton.BackgroundColor3 = _G.Dark
 _ImageButton.ImageColor3 = _G.Primary 
 _ImageButton.ImageTransparency = 0.1 
 _ImageButton.BackgroundTransparency = 0.1 
-_ImageButton.Image = 'rbxassetid://13940080072' 
+_ImageButton.Image = 'rbxassetid://119208325338376' -- VGXMOD ICON
 
 local _UIStroke = Instance.new('UIStroke') 
 _UIStroke.Color = _G.Primary 
@@ -223,7 +223,7 @@ function u5.Window(_, p23)
     _ImageButton2.AnchorPoint = Vector2.new(1, 0.5) 
     _ImageButton2.Position = UDim2.new(1, -10, 0.5, 0) 
     _ImageButton2.Size = UDim2.new(0, 25, 0, 25) 
-    _ImageButton2.Image = 'rbxassetid://119208325338376' -- icon vgxmod 
+    _ImageButton2.Image = 'rbxassetid://7743878857' 
     _ImageButton2.ImageTransparency = 0 
     _ImageButton2.ImageColor3 = Color3.fromRGB(245, 245, 245) 
     local _Frame4 = Instance.new('Frame') 
@@ -485,7 +485,7 @@ function u5.Window(_, p23)
             _ImageLabel2.BackgroundTransparency = 1 
             _ImageLabel2.Position = UDim2.new(0, 8, 0, 8) 
             _ImageLabel2.Size = UDim2.new(0, 45, 0, 45) 
-            _ImageLabel2.Image = 'rbxassetid://13940080072' 
+            _ImageLabel2.Image = 'rbxassetid://119208325338376' -- VGXMOD ICON
             _TextLabel4.Parent = _Frame9 
             _TextLabel4.BackgroundColor3 = Color3.fromRGB(150, 150, 150) 
             _TextLabel4.BackgroundTransparency = 1 

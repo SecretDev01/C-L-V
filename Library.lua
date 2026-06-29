@@ -223,7 +223,7 @@ function u5.Window(_, p23)
     _ImageButton2.AnchorPoint = Vector2.new(1, 0.5) 
     _ImageButton2.Position = UDim2.new(1, -10, 0.5, 0) 
     _ImageButton2.Size = UDim2.new(0, 25, 0, 25) 
-    _ImageButton2.Image = 'rbxassetid://7743878857' 
+    _ImageButton2.Image = 'rbxassetid://119208325338376' -- icon vgxmod 
     _ImageButton2.ImageTransparency = 0 
     _ImageButton2.ImageColor3 = Color3.fromRGB(245, 245, 245) 
     local _Frame4 = Instance.new('Frame') 

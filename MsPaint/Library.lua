@@ -10410,18 +10410,16 @@ function Library:CreateWindow(WindowInfo)
 
 -- VGXMOD HUB CUSTOMIZE 
 
-
     local ToggleButton = Library:AddDraggableButton("", function()
         Library:Toggle()
     end, true, true)
 
     ToggleButton.Button.Size = UDim2.fromOffset(40, 40)
-    ToggleButton.Button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-    ToggleButton.Button.BackgroundTransparency = 0 
+    ToggleButton.Button.BackgroundTransparency = 1
     ToggleButton.Button.AutoButtonColor = false
     ToggleButton.Button.ZIndex = 10
 
-    local ToggleIcon = New("ImageLabel", {
+    New("ImageLabel", {
         Size = UDim2.fromScale(1, 1),
         BackgroundTransparency = 1,
         ZIndex = 11,
@@ -10433,13 +10431,8 @@ function Library:CreateWindow(WindowInfo)
     })
 
     New("UICorner", {
-        CornerRadius = UDim.new(1, 0),
+        CornerRadius = UDim.new(0, 10),
         Parent = ToggleButton.Button,
-    })
-
-    New("UICorner", {
-        CornerRadius = UDim.new(1, 0),
-        Parent = ToggleIcon,
     })
 
     if WindowInfo.MobileButtonsSide == "Right" then

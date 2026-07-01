@@ -10423,7 +10423,7 @@ function Library:CreateWindow(WindowInfo)
         Size = UDim2.fromScale(1, 1),
         BackgroundTransparency = 1,
         ZIndex = 11,
-        Image = "rbxassetid://94858886314945",
+        Image = "rbxassetid://119208325338376",
         ImageTransparency = 0,
         ImageColor3 = Color3.fromRGB(255, 255, 255),
         ScaleType = Enum.ScaleType.Fit,

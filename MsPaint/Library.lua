@@ -10410,6 +10410,7 @@ function Library:CreateWindow(WindowInfo)
 
 -- VGXMOD HUB CUSTOMIZE 
 
+
     local ToggleButton = Library:AddDraggableButton("", function()
         Library:Toggle()
     end, true, true)
@@ -10431,7 +10432,8 @@ function Library:CreateWindow(WindowInfo)
     })
 
     New("UICorner", {
-        CornerRadius = UDim.new(0, 10),
+        -- FIXED: Scale set to 1 makes it a perfect circle
+        CornerRadius = UDim.new(1, 0),
         Parent = ToggleButton.Button,
     })
 
@@ -10446,7 +10448,6 @@ function Library:CreateWindow(WindowInfo)
     if WindowInfo.ShowMobileButtons == false then
         ToggleButton.Button.Visible = false
     end
-    
 
 
 

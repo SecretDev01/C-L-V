@@ -10375,7 +10375,7 @@ function Library:CreateWindow(WindowInfo)
     if WindowInfo.AutoShow and not Library.ActiveLoading then
         task.spawn(Library.Toggle)
     end
-
+--[[
     if Library.IsMobile then
         local ToggleButton = Library:AddDraggableButton("Toggle", function()
             Library:Toggle()
@@ -10405,6 +10405,56 @@ function Library:CreateWindow(WindowInfo)
             LockButton.Button.Visible = false
         end
     end
+]]
+
+
+-- VGXMOD HUB CUSTOMIZE 
+
+    local ToggleButton = Library:AddDraggableButton("", function()
+        Library:Toggle()
+    end, true, true)
+
+    ToggleButton.Button.Size = UDim2.fromOffset(40, 40)
+    ToggleButton.Button.BackgroundTransparency = 1
+    ToggleButton.Button.AutoButtonColor = false
+    ToggleButton.Button.ZIndex = 10
+
+    New("ImageLabel", {
+        Size = UDim2.fromScale(1, 1),
+        BackgroundTransparency = 1,
+        ZIndex = 11,
+        Image = "rbxassetid://94858886314945",
+        ImageTransparency = 0,
+        ImageColor3 = Color3.fromRGB(255, 255, 255),
+        ScaleType = Enum.ScaleType.Fit,
+        Parent = ToggleButton.Button,
+    })
+
+    New("UICorner", {
+        CornerRadius = UDim.new(0, 10),
+        Parent = ToggleButton.Button,
+    })
+
+    if WindowInfo.MobileButtonsSide == "Right" then
+        ToggleButton.Button.AnchorPoint = Vector2.new(1, 0)
+        ToggleButton.Button.Position = UDim2.new(1, -6, 0, 6)
+    else
+        ToggleButton.Button.AnchorPoint = Vector2.new(0, 0)
+        ToggleButton.Button.Position = UDim2.fromOffset(6, 6)
+    end
+
+    if WindowInfo.ShowMobileButtons == false then
+        ToggleButton.Button.Visible = false
+    end
+    
+
+
+
+
+
+
+
+
 
     --// Execution \\--
     SearchBox:GetPropertyChangedSignal("Text"):Connect(function()

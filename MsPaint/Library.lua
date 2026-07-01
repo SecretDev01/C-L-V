@@ -10416,11 +10416,12 @@ function Library:CreateWindow(WindowInfo)
     end, true, true)
 
     ToggleButton.Button.Size = UDim2.fromOffset(40, 40)
-    ToggleButton.Button.BackgroundTransparency = 1
+    ToggleButton.Button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    ToggleButton.Button.BackgroundTransparency = 0 
     ToggleButton.Button.AutoButtonColor = false
     ToggleButton.Button.ZIndex = 10
 
-    New("ImageLabel", {
+    local ToggleIcon = New("ImageLabel", {
         Size = UDim2.fromScale(1, 1),
         BackgroundTransparency = 1,
         ZIndex = 11,
@@ -10432,9 +10433,13 @@ function Library:CreateWindow(WindowInfo)
     })
 
     New("UICorner", {
-        -- FIXED: Scale set to 1 makes it a perfect circle
         CornerRadius = UDim.new(1, 0),
         Parent = ToggleButton.Button,
+    })
+
+    New("UICorner", {
+        CornerRadius = UDim.new(1, 0),
+        Parent = ToggleIcon,
     })
 
     if WindowInfo.MobileButtonsSide == "Right" then
@@ -10448,7 +10453,6 @@ function Library:CreateWindow(WindowInfo)
     if WindowInfo.ShowMobileButtons == false then
         ToggleButton.Button.Visible = false
     end
-
 
 
 

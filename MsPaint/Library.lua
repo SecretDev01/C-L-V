@@ -8306,7 +8306,7 @@ function Library:CreateWindow(WindowInfo)
             CanvasSize = UDim2.fromScale(0, 0),
             Position = UDim2.fromOffset(0, 49),
             ScrollBarThickness = 0,
-            Size = UDim2.new(0, InitialLeftWidth, 1, -70),
+            Size = UDim2.new(0, 45, 1, -70),
             Parent = MainFrame,
         })
         New("UIListLayout", {
@@ -8321,9 +8321,10 @@ function Library:CreateWindow(WindowInfo)
             end,
             Name = "Container",
             Position = UDim2.new(1, 0, 0, 49),
-            Size = UDim2.new(1, -InitialLeftWidth - 1, 1, -70),
+            Size = UDim2.new(1, -46, 1, -70),
             Parent = MainFrame,
         })
+
         New("UIPadding", {
             PaddingBottom = UDim.new(0, 0),
             PaddingLeft = UDim.new(0, 6),
@@ -8514,6 +8515,8 @@ function Library:CreateWindow(WindowInfo)
         local TabLeft
         local TabRight
 
+-- VGXMOD HUB ICON SODE BAR START
+
         Icon = Library:GetCustomIcon(Icon)
         do
             TabButton = New("TextButton", {
@@ -8644,6 +8647,7 @@ function Library:CreateWindow(WindowInfo)
             end
         end
 
+-- VGXMOD ICON SIDE BAR END
 
         --// Warning Box \\--
         local WarningBoxHolder = New("Frame", {

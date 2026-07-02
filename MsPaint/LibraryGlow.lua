@@ -308,10 +308,7 @@ local Templates = {
     },
     UIStroke = {
         ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-        Color = Color3.fromRGB(0, 162, 255), -- This is the Airflow blue color!
-        Thickness = 2,                       -- Makes the outline a bit more visible
     },
-
 
     --// Library \\--
     Window = {
@@ -1732,7 +1729,8 @@ function Library:MakeOutline(Frame: GuiObject, Corner: number?, ZIndex: number?)
     })
 
     local Outline = New("Frame", {
-        BackgroundColor3 = "OutlineColor",
+        BackgroundColor3 = Color3.fromRGB(0, 162, 255), -- Airflow Blue
+
         Position = UDim2.fromOffset(1, 1),
         Size = UDim2.new(1, -2, 1, -2),
         ZIndex = ZIndex,
